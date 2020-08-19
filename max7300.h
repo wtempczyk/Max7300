@@ -15,12 +15,6 @@
 
 #include "main.h"
 
-typedef enum
-{
-MAX7300_OUTPUT=1,
-MAX7300_INPUT_WITHOUT_PU,
-MAX7300_INPUT_WITH_PU
-}MAX7300_PORT_TYPE;
 
 int MAX7300_init(I2C_HandleTypeDef *hi2c);
 void MAX7300_write(I2C_HandleTypeDef *hi2c, int pin, int stan);
