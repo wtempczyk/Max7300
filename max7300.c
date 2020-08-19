@@ -78,7 +78,6 @@ uint8_t MAX7300_read(I2C_HandleTypeDef *hi2c, int pin)
 	{
 		return;  //zabezpieczenie przed błędem
 	}
-	dane[0]=5;
 	uint16_t reg=0;
 	reg=(32+pin); //obliczanie adresu (bo adresy zaczynają się od 0x24 dla pin 4, a 32 DEC to 24 HEX )
 	HAL_I2C_Mem_Read(hi2c, ADR, reg, 1, dane, 1, 100);
